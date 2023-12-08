@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <!--font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="art.css">
+
+    <style>
+
+
+
+        :root{
+    --pink:#e84393;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+    
+    
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #333;
+    color: #ffff;
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+.btn:hover{
+    background: #ee2794;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 1rem 5%; /* Updated padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.16);
+    font-size: 15px;
+    margin: auto;
+    max-width: 100%;
+}
+
+section {
+    padding: 2rem 5%; /* Updated padding */
+}
+
+header img{
+     margin-left: -14px;
+     margin-top: -15px;
+}
+
+
+header .logo{
+    font-size: 3rem;
+    color: #851249;
+    font-weight: bolder;
+    margin-left: -305px;
+}
+header .logo span{
+    color: #e24eb6;
+}
+header .navbar a{
+    font-size: 19px;
+    color:  #381425;
+    line-height: 50px;
+    padding:0 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+header .navbar{
+    margin-right: 150px;
+    
+}
+
+header .navbar a:hover{
+    color: var(--pink);
+}
+header .icons a {
+    font-size: 2.5rem;
+    color: #333;
+    margin-left: 1rem;
+}
+header .icons a:hover{
+    color: #e84393;
+}
+header #toggler{
+    display: none;
+}
+header .fa-bars{
+    font-size: 3rem;
+    color: #333;
+    border-radius: 5rem;
+    padding: 5rem 1.5rem;
+    cursor:pointer;
+    display: none;
+}
+
+#home{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #faa9d0;
+    background-size: cover;
+    background-position: center;
+}
+#home .content{
+    max-width: 50rem;
+}
+#home .content h3{
+    font-size: 40px;
+    color: #333;
+}
+#home .content span{
+    font-size: 2.5rem;
+    color: #ee2794;
+    padding: 1rem 0;
+    line-height: 1,5;
+}
+#home .content p{
+    font-size: 1.5rem;
+    color: #181212;
+    padding: 1rem 0;
+    line-height: 1,5;
+}
+                          /* section about*/
+
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    color: #333;
+    padding: 1rem;
+    margin: 2rem 0;
+    background: rgba(245, 35, 140, 0.05);
+}
+.heading span{
+    color: var(--pink);
+}
+
+
+
+
+#about .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+}
+#about .row .video-container{
+    flex: 1 1 40rem;
+    position: relative;
+}
+#about .row .video-container video{
+    width: 100%;
+    border: 1.5rem solid #fff;
+    border-radius: .5rem;
+    box-shadow: 0.5rem 1rem rgba(0, 0, 0, .1);
+    height: 90%;
+    object-fit: cover;
+}
+#about .row .video-container h3{
+    position: absolute;
+    top: 50%; transform: translateY(-50%);
+    font-size: 3rem;
+    width: 100%;
+    background: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
+    mix-blend-mode: screen;
+}
+#about .row .content{
+    flex: 1 1 40rem;
+}
+#about .row .content h3{
+    font-size: 3rem;
+    color: #333;
+}
+#about .row .content p{
+    font-size: 1.5rem;
+    color: #999;
+    padding: .5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5;
+}
+
+
+
+
+
+.icons-container{
+    background: #eee;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.icons-container .icons{
+    background: #fff;
+    border: 1rem solid rgba(0, 0, 0, .1);
+   
+    display: flex;
+    align-items: center;
+    flex: 1 1 25rem;
+}
+.icons-container .icons h3{
+    color: #333;
+    padding-bottom: .5rem;
+    font-size: 1.5rem;
+}
+.icons-container .icons span{
+    color: #555;
+    font-size: 1.3rem;
+}
+
+
+
+
+#products .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+#products .box-container .box{
+    flex: 1 1 30rem;
+    box-shadow: 0.5rem 0.5rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    position: relative;
+}
+#products .box-container .box .discount{
+    position: absolute;
+    top: 1rem; left: 1rem;
+    padding: .7rem 1rem;
+    font-size: 2rem;
+    color: var(--pink);
+    background: rgba(255, 51, 153, .05);
+    z-index: 1;
+    border-radius: .5rem;
+}
+#products .box-container .box .image{
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    overflow: hidden;
+   
+}
+#products .box-container .box .image img{
+    height: 25rem;
+}
+#products .box-container .box:hover .image img{
+    transform: scale(1.1);
+}
+/*#products .box-container .box .image .icons{
+    position: absolute;
+    bottom: -7rem; left: 0; right: 0;
+    display: flex;
+}
+#products .box-container .box:hover .image .icons{
+    bottom: 0;
+}
+#products .box-container .box .image .icons a{
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 1.5rem;
+    width: 50%;
+    background: var(--pink);
+    color: #fff;
+}*/
+#products .box-container .box .image .icons .cart-btn{
+    border-left: .5rem solid #fff7;
+    border-right: .5rem solid #fff7;
+    width: 100%;
+}
+#products .box-container .box .image .icons a:hover{
+    background: #333;
+}
+#products .box-container .box .content{
+    padding: 2rem;
+    text-align: center;
+}
+#products .box-container .box .content h3{
+    font-size: 2.5rem;
+    color: #333;
+}
+#products .box-container .box .content .price{
+    font-size: 2rem;
+    color:var(--pink);
+    font-weight: bolder;
+    padding-top: 1rem;
+}
+#products .box-container .box .content .price span {
+    font-size: 1.5rem;
+    color:#999;
+    font-weight:lighter;
+    text-decoration: line-through;
+}
+
+
+
+
+
+
+
+
+
+.review .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.review .box-container .box{
+    flex: 1 1 30rem;
+    box-shadow: 0.5rem 0.5rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    padding: 3rem 2rem;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+.review .box-container .box .fa-quote-right{
+    position: absolute;
+    bottom: 3rem; right: 3rem;
+    font-size: 6rem;
+    color: #eee;
+}
+.review .box-container .box .user{
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+}
+.review .box-container .box p{
+    color: #999;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    padding-top: 2rem;
+}
+.review .box-container .box .stars i{
+    color: var(--pink);
+    font-size: 2rem;
+}
+.review .box-container .box .user i{
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+.review .box-container .box .user h3{
+    font-size: 2rem;
+    color: #333;
+}
+.review .box-container .box .user h3{
+    font-size: 1.5rem;
+    color: #999;
+}
+
+
+
+
+.contact .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+}
+.contact .row form{
+    flex: 1 1 40rem;
+    padding: 2rem 2.5rem;
+    box-shadow: 0.5rem 1.5rem rgba(0, 0, 0, .1);
+    border: .1rem solid rgba(0, 0, 0, .1);
+    background: #fff;
+    border-radius: .5rem;
+}
+.contact .row .image{
+    flex: 1 1 40rem;
+}
+.contact .row .image img {
+    width: 100%;
+  
+}
+.contact .row form .box{
+    padding: 1rem;
+    font-size: 2rem;
+    color: #333;
+    text-transform: none;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    margin: .7rem 0;
+    
+}
+.contact .row form .box:focus{
+    border-color: var(--pink);
+}
+.contact .row form textarea{
+    height: 15rem;
+    resize: none;
+}
+
+
+
+
+
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.footer .box-container .box{
+    flex: 1 1 25rem;
+}
+.footer .box-container .box h3{
+    color: #333;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+.footer .box-container .box a{
+    display: block;
+    color: #666;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+.footer .box-container .box a:hover{
+    color: var(--pink);
+    text-decoration: underline;
+
+}
+.footer .box-container .box img{
+    margin-top: 1rem;
+}
+.footer .credit{
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 2.5rem;
+    color: #333;
+    border-top: .1rem solid rgba(0, 0, 0, .1);
+}
+.footer .credit span{
+    color: var(--pink);
+}
+
+
+
+
+
+
+
+                /* media queries*/
+
+                @media (max-width: 991px) {
+            html {
+                font-size: 55%;
+            }
+            header {
+                padding: 1rem;
+                width: 100%;
+            }
+            section {
+                padding: 2rem;
+            }
+            #home {
+                background-position: left;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header{
+                width: 100%;
+            }
+            header .fa-bars {
+                display: block;
+            }
+            header .logo{
+                margin-left: -305px; 
+            } 
+            header .navbar {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #eee;
+                border-top: .1rem solid rgba(0, 0, 0, .1);
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            }
+            header #toggler:checked ~ .navbar {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            }
+            header .navbar a {
+                margin: 1.5rem;
+                padding: 1.5rem;
+                background: #ffff;
+                border: .1rem solid rgba(0, 0, 0, .1);
+                display: block;
+                font-size: 25px;
+            }
+            #home .content h3 {
+                font-size: 5rem;
+            }
+            #home .content span {
+                font-size: 2.5rem;
+            }
+            .icons-container .icons h3 {
+                font-size: 2rem;
+            }
+            .icons-container .icons span {
+                font-size: 1.7rem;
+            }
+        }
+
+        @media (max-width: 450px) {
+            html {
+                font-size: 55%;
+            }
+            header {
+                padding: 1rem;
+                width: 100%;
+            }
+            .heading {
+                font-size: 3rem;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+                 <!--header-->
+
+    <header> 
+      
+      <input type="checkbox" name="" id="toggler">
+      <label for="toggler" class="fas fa-bars"></label>
+      <img src="saj.jpg" alt="">
+      
+     <a href="#" class="logo">Sajuz_art<span>.</span></a>
+
+     <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#review">Review</a>
+        <a href="#contact">contact</a>
+     </nav>
+
+    
+    </header> 
+    
+    <section class="Home" id="home">
+         
+        <div class="content">
+          <h3>Coustomized Gifts</h3>
+          <span>Unique Products For Your Loved Ones</span>
+          <p>Welcome to Sajuz_art, where unforgettable moments come to life through customized gifts. With a passion for creating heartfelt surprises, we specialize in delivering personalized experiences for every occasion.We understand that every gift tells a unique story. That's why we go above and beyond to ensure each present is a reflection of your thoughtfulness. From birthdays and anniversaries to weddings and holidays, we have the perfect gift for every milestone.</p>
+          <a href="#" class="btn">shop now</a>
+        </div>
+
+    </section>
+
+    <section class="About" id="about">
+        <h1 class="heading"><span>About</span>   us</h1>
+
+        <div class="row">
+              <div class="video-container">
+                        <video style="height: 300px; width: 400px;" src="VID-20230623-WA0016.mp4" loop autoplay muted></video>
+                        <h3 style="width: 400px;">Best  Seller</h3>
+              </div>
+
+              <div class="content">
+                <h3>why choose us</h3>
+                <p>Our passionate team goes above and beyond to ensure that each gift is tailored to reflect the recipient's personality and preferences, creating truly unforgettable experiences. With a wide range of options, including personalized engravings and custom designs, we offer a diverse selection to suit any occasion or recipient.</p>
+                <p>Our easy ordering process, accessible through our user-friendly website, makes it convenient for you to customize your gift and securely place your order. Discover the joy of giving with Sajuz_art and let us help you create a personalized gift that will leave a lasting impression.</p>
+
+                <a href="#" class="btn">learn more</a>
+              </div>
+
+        </div>
+    </section>
+
+    <section class="icons-container">
+
+        <div class=" icons">
+            <img src="img icon 1.png" alt="">
+
+            <div class="info">
+                <h3>Fast Delivery</h3>
+                <span>On All Orders</span>
+
+            </div>
+        </div>
+
+        <div class=" icons">
+            <img src="img icon 2.jpg" alt="">
+
+            <div class="info">
+                <h3>24/7 Support </h3>
+                <span>Call Us Anytime</span>
+
+            </div>
+        </div>
+
+        <div class=" icons">
+            <img src="img icon 3.jpg" alt="">
+
+            <div class="info">
+                <h3>Offers </h3>
+                <span>On All Orders</span>
+
+            </div>
+        </div>
+
+        <div class=" icons">
+            <img src="img icon 4.jpg" alt="">
+
+            <div class="info">
+                <h3>Secure Payments</h3>
+                <span>100 Secure Payment</span>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="Products" id="products">
+
+        <h1 class="heading">Delivered  <span>Products</span></h1>
+
+        <div class="box-container">
+            <div class="box">
+                <span class="discount">-10%</span>
+                <div class="image">
+                    <img src="saj1.jpg" alt="">
+                    <div class="icons">
+                        <a href="#" class="fa fa-heart"></a>
+                        <a href="#" class="cart-btn">add to cart</a>
+                        <a href="#" class="fa fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>Shirt box</h3>
+                    <div class="price">$12.99   <span>$15.99</span></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <span class="discount">-15%</span>
+                <div class="image">
+                    <img src="saj2.jpg" alt="">
+                    <div class="icons">
+                        <a href="#" class="fa fa-heart"></a>
+                        <a href="#" class="cart-btn">add to cart</a>
+                        <a href="#" class="fa fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>Shirt & frame box</h3>
+                    <div class="price">$12.99   <span>$15.99</span></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <span class="discount">-5%</span>
+                <div class="image">
+                    <img src="saj3.jpg" alt="">
+                    <div class="icons">
+                        <a href="#" class="fa fa-heart"></a>
+                        <a href="#" class="cart-btn">add to cart</a>
+                        <a href="#" class="fa fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>chocolate box</h3>
+                    <div class="price">$12.99   <span>$15.99</span></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <span class="discount">-20%</span>
+                <div class="image">
+                    <img src="saj4.jpg" alt="">
+                    <div class="icons">
+                        <a href="#" class="fa fa-heart"></a>
+                        <a href="#" class="cart-btn">add to cart</a>
+                        <a href="#" class="fa fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>watch box</h3>
+                    <div class="price">$12.99   <span>$15.99</span></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <span class="discount">-17%</span>
+                <div class="image">
+                    <img src="saj5.jpg" alt="">
+                    <div class="icons">
+                        <a href="#" class="fa fa-heart"></a>
+                        <a href="#" class="cart-btn">add to cart</a>
+                        <a href="#" class="fa fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>Dress box</h3>
+                    <div class="price">$12.99  <span>$15.99</span></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <span class="discount">-3%</span>
+                <div class="image">
+                    <img src="saj6.jpg" alt="">
+                    <div class="icons">
+                        <a href="#" class="fa fa-heart"></a>
+                        <a href="#" class="cart-btn">add to cart</a>
+                        <a href="#" class="fa fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>box</h3>
+                    <div class="price">$12.99   <span>$15.99</span></div>
+                </div>
+            </div>
+
+            <div class="box">
+              
+                <div class="image">
+                    <img src="saj7.jpg" alt="">
+                    <div class="icons">
+                        <a href="#" class="fa fa-heart"></a>
+                        <a href="#" class="cart-btn">add to cart</a>
+                        <a href="#" class="fa fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>Watch box</h3>
+                    <div class="price">$12.99  <span>$15.99</span></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <span class="discount">-10%</span>
+                <div class="image">
+                    <img src="saj8.jpg" alt="">
+                    <div class="icons">
+                        <a href="#" class="fa fa-heart"></a>
+                        <a href="#" class="cart-btn">add to cart</a>
+                        <a href="#" class="fa fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>flower pot</h3>
+                    <div class="price">$12.99   <span>$15.99</span></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <span class="discount">-10%</span>
+                <div class="image">
+                    <img src="saj9.jpg" alt="">
+                    <div class="icons">
+                        <a href="#" class="fa fa-heart"></a>
+                        <a href="#" class="cart-btn">add to cart</a>
+                        <a href="#" class="fa fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>dress box</h3>
+                    <div class="price">$12.99   <span>$15.99</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="review" id="review">
+        <h1 class="heading"> customer's  <span>review</span></h1>
+        <div class="box-container">
+            <div class="box">
+               <div class="stars">
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+               </div>
+
+               <p>The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It is often assisted by technologies such>as Cascading Style Sheets and scripting languages such as JavaScript. Wikipedia</p>
+
+               <div class="user">
+                <i style="font-size: 50px;"  class="fa-solid fa-user"></i>
+                    <div class="user-info">
+                         <h3>john deo</h3>
+                         <span>happy customer</span>
+                    </div>
+               </div>
+               <span class="fas fa-quote-right"></span>
+            </div>
+
+            <div class="box">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+ 
+                <p>The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It is often assisted by technologies such>as Cascading Style Sheets and scripting languages such as JavaScript. Wikipedia</p>
+ 
+                <div class="user">
+                 <i style="font-size: 50px;"  class="fa-solid fa-user"></i>
+                     <div class="user-info">
+                          <h3>john deo</h3>
+                          <span>happy customer</span>
+                     </div>
+                </div>
+                <span class="fas fa-quote-right"></span>
+             </div>
+
+             <div class="box">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+ 
+                <p>The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It is often assisted by technologies such>as Cascading Style Sheets and scripting languages such as JavaScript. Wikipedia</p>
+ 
+                <div class="user">
+                 <i style="font-size: 50px;" class="fa-solid fa-user"></i>
+                     <div class="user-info">
+                          <h3>john deo</h3>
+                          <span>happy customer</span>
+                     </div>
+                </div>
+                <span class="fas fa-quote-right"></span>
+             </div>
+        </div>
+  
+    </section>
+
+    <section class="contact" id="contact">
+
+        <h1 class=" heading">  <span> contact </span>  us </h1>
+
+        <div class="row">
+
+            <form id="contactForm" action="">
+                <input type="text" placeholder="Name" class="box" id="name"><br>
+                <input type="text" placeholder="Email" class="box" id="email"><br>
+                <input type="text" placeholder="Phone" class="box" id="phone"><br>
+                <textarea class="box" placeholder="Message" id="message" cols="30" rows="10"></textarea><br>
+                <input type="submit" value="Send Message" class="btn" onclick="whatsapp()">
+            </form>
+
+            <div class="image">
+                <img src="sajaaa.jpg" alt="">
+            </div>
+
+            
+
+        </div>
+
+    </section>
+
+    <section class="footer">
+
+        <div class="box-container">
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Products</a>
+                <a href="#">Review</a>
+                <a href="#">Contact</a>
+            </div>
+
+            <div class="box">
+                <h3>Extra links</h3>
+                <a href="#">my account</a>
+                <a href="#">my order</a>
+                <a href="#">my favorite</a>
+            </div>
+
+            <div class="box">
+                <h3>locations</h3>
+                <a href="#">india</a>
+                <a href="#">Kerala</a>
+                <a href="#">palakkad</a>
+                <a href="#">pattambi</a>
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#">9746973894</a>
+                <a href="#">WWW@gmail.com</a>
+                <a href="#">kerala, india - 1234</a>
+                <img src="visa.png" alt="">
+            </div>
+        </div>
+
+        <div class="credit"> created by <span> mr. web designer </span> | All Rights Reserved</div>
+
+    </section>
+    
+
+    <script>
+        function whatsapp() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var mobile = document.getElementById("phone").value;
+            var message = document.getElementById("message").value;
+    
+            var whatsappurl = "https://wa.me/918714129567?text=" +
+            "Name Of Customer: " + name + "%0a" +
+            "Mobile Number: " + mobile + "%0a" +
+            "Email Id: " + email + "%0a" +
+            "Enquery: " + message;
+            
+            window.open(whatsappurl, "_blank").focus();
+        }
+    </script>
+
+</body>
+</html>
